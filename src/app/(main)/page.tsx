@@ -5,7 +5,7 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Shop all available models only at the ACME. Worldwide Shipping. Secure Payment.",
+    "Discover top-quality toddler products at our store. From training cups to educational toys - we're here to make parenting a joyful journey.",
 }
 
 const Home = () => {

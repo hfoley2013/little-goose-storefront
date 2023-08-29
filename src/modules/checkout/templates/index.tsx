@@ -1,6 +1,5 @@
 import { CheckoutProvider } from "@lib/context/checkout-context"
 import ChevronDown from "@modules/common/icons/chevron-down"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
 import Link from "next/link"
 import CheckoutLoader from "../components/checkout-loader"
 import CheckoutForm from "./checkout-form"
@@ -9,23 +8,23 @@ import CheckoutSummary from "./checkout-summary"
 const CheckoutTemplate = () => {
   return (
     <CheckoutProvider>
-      <div className="bg-gray-100 relative small:min-h-screen">
+      <div className="relative bg-gray-100 small:min-h-screen">
         <div className="h-16 bg-white">
-          <nav className="flex items-center h-full justify-between content-container">
+          <nav className="flex items-center justify-between h-full content-container">
             <Link
               href="/cart"
-              className="text-small-semi text-gray-700 flex items-center gap-x-2 uppercase flex-1 basis-0"
+              className="flex items-center flex-1 text-gray-700 uppercase text-small-semi gap-x-2 basis-0"
             >
               <>
                 <ChevronDown className="rotate-90" size={16} />
-                <span className="mt-px hidden small:block">
+                <span className="hidden mt-px small:block">
                   Back to shopping cart
                 </span>
-                <span className="mt-px block small:hidden">Back</span>
+                <span className="block mt-px small:hidden">Back</span>
               </>
             </Link>
             <Link href="/" className="text-xl-semi">
-              ACME
+              Little Goose
             </Link>
             <div className="flex-1 basis-0" />
           </nav>
@@ -36,9 +35,6 @@ const CheckoutTemplate = () => {
             <CheckoutForm />
             <CheckoutSummary />
           </div>
-        </div>
-        <div className="py-4 w-full flex items-center justify-center">
-          <MedusaCTA />
         </div>
       </div>
     </CheckoutProvider>

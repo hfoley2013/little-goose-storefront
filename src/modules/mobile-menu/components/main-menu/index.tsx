@@ -25,7 +25,7 @@ const MainMenu = () => {
 
   return (
     <div className="flex flex-col flex-1">
-      <div className="flex items-center justify-between w-full border-b border-gray-200 py-4 px-6">
+      <div className="flex items-center justify-between w-full px-6 py-4 border-b border-gray-200">
         <div className="flex-1 basis-0">
           <button
             className="flex items-center gap-x-2"
@@ -36,19 +36,19 @@ const MainMenu = () => {
           </button>
         </div>
         <div>
-          <h1 className="text-xl-semi uppercase">Acme</h1>
+          <h1 className="uppercase text-xl-semi">Little Goose</h1>
         </div>
-        <div className="flex-1 basis-0 flex justify-end">
+        <div className="flex justify-end flex-1 basis-0">
           <button onClick={close}>
             <X size={20} />
           </button>
         </div>
       </div>
 
-      <div className="space-y-6 flex-1 flex flex-col justify-between p-6">
+      <div className="flex flex-col justify-between flex-1 p-6 space-y-6">
         {process.env.FEATURE_SEARCH_ENABLED && (
           <button
-            className="bg-gray-50 flex items-center px-4 py-2 gap-x-2 text-gray-500"
+            className="flex items-center px-4 py-2 text-gray-500 bg-gray-50 gap-x-2"
             onClick={setScreenSearch}
           >
             <Search size={24} />
@@ -58,9 +58,9 @@ const MainMenu = () => {
           </button>
         )}
 
-        <div className="flex flex-col flex-1 text-large-regular text-gray-900">
+        <div className="flex flex-col flex-1 text-gray-900 text-large-regular">
           <ul className="flex flex-col gap-y-2">
-            <li className="bg-gray-50 p-4">
+            <li className="p-4 bg-gray-50">
               <Link href="/store">
                 <button
                   className="flex items-center justify-between w-full"
@@ -75,7 +75,7 @@ const MainMenu = () => {
             {collections ? (
               <>
                 {collections.map((collection) => (
-                  <li key={collection.id} className="bg-gray-50 p-4">
+                  <li key={collection.id} className="p-4 bg-gray-50">
                     <Link href={`/collections/${collection.handle}`}>
                       <button
                         className="flex items-center justify-between w-full"
@@ -102,7 +102,7 @@ const MainMenu = () => {
                 <span className="text-gray-700 uppercase">Account</span>
                 <Link href={`/account/login`} passHref>
                   <button
-                    className="flex items-center justify-between border-b border-gray-200 py-2 w-full"
+                    className="flex items-center justify-between w-full py-2 border-b border-gray-200"
                     onClick={close}
                   >
                     <span className="sr-only">Go to sign in page</span>
@@ -116,7 +116,7 @@ const MainMenu = () => {
                 <span className="text-gray-700 uppercase">Signed in as</span>
                 <Link href={`/account`} passHref>
                   <button
-                    className="flex items-center justify-between border-b border-gray-200 py-2 w-full"
+                    className="flex items-center justify-between w-full py-2 border-b border-gray-200"
                     onClick={close}
                   >
                     <span className="sr-only">Go to account page</span>
@@ -129,7 +129,7 @@ const MainMenu = () => {
             <div className="flex flex-col gap-y-4">
               <span className="text-gray-700 uppercase">Delivery</span>
               <button
-                className="flex items-center justify-between border-b border-gray-200 py-2"
+                className="flex items-center justify-between py-2 border-b border-gray-200"
                 onClick={setScreenCountry}
               >
                 <span className="sr-only">
