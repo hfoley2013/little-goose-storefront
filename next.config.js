@@ -12,7 +12,7 @@ module.exports = withStoreConfig({
       "medusa-public-images.s3.eu-west-1.amazonaws.com",
       "localhost",
       "medusa-server-testing.s3.amazonaws.com",
-      "https://little-goose-medusa-server-1656b4d85bc8.herokuapp.com",
+      "little-goose-medusa-server.s3.us-west-2.amazonaws.com",
     ],
   },
 })
