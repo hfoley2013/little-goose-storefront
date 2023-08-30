@@ -53,7 +53,7 @@ const Nav = () => {
         className={clsx(
           "relative h-16 px-8 mx-auto transition-colors bg-white border-b border-transparent duration-100 group-hover:bg-[#79aa9c] group-hover:border-gray-200",
           {
-            "!bg-[#79aa9c] !border-gray-200": !isHome || isScrolled,
+            "!bg-[#79aa9c] !border-gray-200 text-white": !isHome || isScrolled,
           }
         )}
         onMouseEnter={() => setIsHeaderHovered(true)}
@@ -61,7 +61,7 @@ const Nav = () => {
       >
         <nav
           className={clsx(
-            "text-white flex items-center justify-between w-full h-full text-small-regular transition-colors duration-200",
+            "font-bold flex items-center justify-between w-full h-full text-small-regular transition-colors duration-200",
             {
               "text-[#79aa9c] group-hover:text-white": isHome && !isScrolled,
             }

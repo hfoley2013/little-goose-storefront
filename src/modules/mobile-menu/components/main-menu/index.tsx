@@ -7,6 +7,7 @@ import X from "@modules/common/icons/x"
 import { useCollections, useMeCustomer } from "medusa-react"
 import Link from "next/link"
 import ReactCountryFlag from "react-country-flag"
+import Image from "next/image"
 
 const MainMenu = () => {
   const { collections } = useCollections()
@@ -36,7 +37,17 @@ const MainMenu = () => {
           </button>
         </div>
         <div>
-          <h1 className="uppercase text-xl-semi">Little Goose</h1>
+          <Image
+            src={"/little_goose_logo_inverted.svg"}
+            alt="Little Goose Logo"
+            draggable={false}
+            width={60}
+            height={60}
+            style={{
+              objectFit: "contain",
+              objectPosition: "",
+            }}
+          />
         </div>
         <div className="flex justify-end flex-1 basis-0">
           <button onClick={close}>

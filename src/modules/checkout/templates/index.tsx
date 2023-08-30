@@ -4,6 +4,7 @@ import Link from "next/link"
 import CheckoutLoader from "../components/checkout-loader"
 import CheckoutForm from "./checkout-form"
 import CheckoutSummary from "./checkout-summary"
+import Image from "next/image"
 
 const CheckoutTemplate = () => {
   return (
@@ -24,7 +25,17 @@ const CheckoutTemplate = () => {
               </>
             </Link>
             <Link href="/" className="text-xl-semi">
-              Little Goose
+              <Image
+                src={"/little_goose_logo_inverted.svg"}
+                alt="Little Goose Logo"
+                draggable={false}
+                width={60}
+                height={60}
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "",
+                }}
+              />
             </Link>
             <div className="flex-1 basis-0" />
           </nav>
