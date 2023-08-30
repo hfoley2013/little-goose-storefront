@@ -4,6 +4,7 @@ import clsx from "clsx"
 import { useCollections } from "medusa-react"
 import Link from "next/link"
 import CountrySelect from "../country-select"
+import Image from "next/image"
 
 const FooterNav = () => {
   const { collections } = useCollections()
@@ -13,7 +14,17 @@ const FooterNav = () => {
       <div className="flex flex-col items-start justify-between gap-y-6 xsmall:flex-row">
         <div>
           <Link href="/" className="uppercase text-xl-semi">
-            Little Goose
+            <Image
+              src={"/little_goose_logo_inverted.svg"}
+              alt="Little Goose Logo"
+              draggable={false}
+              width={120}
+              height={120}
+              style={{
+                objectFit: "contain",
+                objectPosition: "",
+              }}
+            />
           </Link>
         </div>
         <div className="grid grid-cols-2 text-small-regular gap-x-16">

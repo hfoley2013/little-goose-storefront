@@ -10,11 +10,13 @@ import clsx from "clsx"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 const Nav = () => {
   const pathname = usePathname()
   const [isHome, setIsHome] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isHeaderHovered, setIsHeaderHovered] = useState(false)
 
   //useEffect that detects if window is scrolled > 5px on the Y axis
   useEffect(() => {
@@ -49,17 +51,19 @@ const Nav = () => {
     >
       <header
         className={clsx(
-          "relative h-16 px-8 mx-auto transition-colors bg-transparent border-b border-transparent duration-200 group-hover:bg-[#79aa9c] group-hover:border-gray-200",
+          "relative h-16 px-8 mx-auto transition-colors bg-white border-b border-transparent duration-100 group-hover:bg-[#79aa9c] group-hover:border-gray-200",
           {
             "!bg-[#79aa9c] !border-gray-200": !isHome || isScrolled,
           }
         )}
+        onMouseEnter={() => setIsHeaderHovered(true)}
+        onMouseLeave={() => setIsHeaderHovered(false)}
       >
         <nav
           className={clsx(
-            "text-gray-900 flex items-center justify-between w-full h-full text-small-regular transition-colors duration-200",
+            "text-white flex items-center justify-between w-full h-full text-small-regular transition-colors duration-200",
             {
-              "text-white group-hover:text-gray-900": isHome && !isScrolled,
+              "text-[#79aa9c] group-hover:text-white": isHome && !isScrolled,
             }
           )}
         >
@@ -71,10 +75,29 @@ const Nav = () => {
               <DropdownMenu />
             </div>
           </div>
+          <div className="">
+
+          </div>
 
           <div className="flex items-center h-full">
             <Link href="/" className="uppercase text-xl-semi">
-              Little Goose
+              <Image
+                src={
+                  isHeaderHovered
+                    ? "/little_goose_logo.svg" // Change this to the image for hover state
+                    : isHome && !isScrolled
+                      ? "/little_goose_logo_inverted.svg"
+                      : "/little_goose_logo.svg"
+                }
+                alt="Little Goose Logo"
+                draggable={false}
+                width={60}
+                height={60}
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "",
+                }}
+              />
             </Link>
           </div>
 
