@@ -27,9 +27,9 @@ const DropdownMenu = () => {
       className="h-full"
     >
       <div className="flex items-center h-full">
-        <Popover className="h-full flex">
+        <Popover className="flex h-full">
           <>
-            <Link href="/shop" className="relative flex h-full" passHref>
+            <Link href="/store" className="relative flex h-full" passHref>
               <Popover.Button
                 className={clsx(
                   "relative h-full flex items-center transition-all ease-out duration-200"
@@ -52,12 +52,12 @@ const DropdownMenu = () => {
             >
               <Popover.Panel
                 static
-                className="absolute top-full inset-x-0 text-sm text-gray-700 z-30 border-y border-gray-200"
+                className="absolute inset-x-0 z-30 text-sm text-gray-700 border-gray-200 top-full border-y"
               >
-                <div className="relative bg-white py-8">
+                <div className="relative py-8 bg-white">
                   <div className="flex items-start content-container">
                     <div className="flex flex-col flex-1 max-w-[30%]">
-                      <h3 className="text-base-semi text-gray-900 mb-4">
+                      <h3 className="mb-4 text-gray-900 text-base-semi">
                         Collections
                       </h3>
                       <div className="flex items-start">
