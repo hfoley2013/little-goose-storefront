@@ -5,6 +5,7 @@ import useEnrichedLineItems from "@lib/hooks/use-enrich-line-items"
 import Button from "@modules/common/components/button"
 import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
+import ShoppingCart from "@modules/common/icons/shoppingcart"
 import Trash from "@modules/common/icons/trash"
 import Thumbnail from "@modules/products/components/thumbnail"
 import { formatAmount, useCart } from "medusa-react"
@@ -20,8 +21,9 @@ const CartDropdown = () => {
   return (
     <div className="z-50 h-full" onMouseEnter={open} onMouseLeave={close}>
       <Popover className="relative h-full">
-        <Popover.Button className="h-full">
-          <Link href="/cart">{`My Cart (${totalItems})`}</Link>
+        <Popover.Button className="flex items-center h-full space-x-1">
+          <ShoppingCart />
+          <Link className="text-sm sm:text-base" href="/cart">{`My Cart (${totalItems})`}</Link>
         </Popover.Button>
         <Transition
           show={state}
