@@ -11,6 +11,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import AccountIcon from "@modules/common/icons/account"
 
 const Nav = () => {
   const pathname = usePathname()
@@ -104,7 +105,10 @@ const Nav = () => {
           <div className="flex items-center justify-end flex-1 h-full gap-x-6 basis-0">
             <div className="items-center hidden h-full small:flex gap-x-6">
               {process.env.FEATURE_SEARCH_ENABLED && <DesktopSearchModal />}
-              <Link href="/account">Account</Link>
+              <div className="flex items-center space-x-1">
+                <AccountIcon />
+                <Link className="text-base" href="/account">Account</Link>
+              </div>
             </div>
             <CartDropdown />
           </div>

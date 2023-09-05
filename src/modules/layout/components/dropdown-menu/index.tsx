@@ -4,6 +4,7 @@ import {
   useNavigationCollections,
 } from "@lib/hooks/use-layout-data"
 import repeat from "@lib/util/repeat"
+import StoreFrontIcon from "@modules/common/icons/storefront"
 import ProductPreview from "@modules/products/components/product-preview"
 import SkeletonProductPreview from "@modules/skeletons/components/skeleton-product-preview"
 import clsx from "clsx"
@@ -36,7 +37,10 @@ const DropdownMenu = () => {
                 )}
                 onClick={() => push("/store")}
               >
-                Store
+                <div className="flex items-center space-x-1 text-base">
+                  <StoreFrontIcon />
+                  Store
+                </div>
               </Popover.Button>
             </Link>
 
