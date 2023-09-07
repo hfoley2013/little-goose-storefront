@@ -44,7 +44,7 @@ const FooterNav = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse justify-center gap-y-4 xsmall:items-center xsmall:flex-row xsmall:items-end xsmall:justify-between">
+      <div className="flex flex-col-reverse justify-center gap-y-4 xsmall:flex-row xsmall:items-end xsmall:justify-between">
         <span className="text-gray-500 text-xsmall-regular">
           © Copyright 2021 Little Goose LLC
         </span>
