@@ -14,7 +14,7 @@ const FooterCTA = () => {
 
         <div className="relative w-full aspect-square small:w-[35%] small:aspect-[28/36]">
           <Image
-            src="/ravenna_cup_lifestyle.jpg"
+            src="/ravenna_cup_lifestyle2.jpg"
             alt="A child takes a drink from the Ravenna Cup."
             className="absolute inset-0 rounded-lg"
             fill

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   },
   description: "Discover top-quality toddler products at our store. From training cups to educational toys - we're here to make parenting a joyful journey.",
   keywords: ['baby products', 'sippy cup', 'toddler cups', 'cups', 'kids cups'],
-  metadataBase: new URL('https://thislittlegoose.vercel.app'),
+  metadataBase: new URL('https://thislittlegoose.com'),
   openGraph: {
     title: 'Little Goose',
     description: 'Top-quality baby and toddler products.',
-    url: 'https://thislittlegoose.vercel.app',
+    url: 'https://thislittlegoose.com',
     siteName: 'Little Goose',
     images: [
       {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     maximumScale: 5,
   },
   alternates: {
-    canonical: 'https://thislittlegoose.vercel.app',
+    canonical: 'https://thislittlegoose.com',
   },
 }
 export default function RootLayout({
