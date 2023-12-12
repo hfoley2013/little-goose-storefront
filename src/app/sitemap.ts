@@ -3,31 +3,31 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://thislittlegoose.vercel.app',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
             lastModified: new Date(),
         },
         {
-            url: 'https://thislittlegoose.vercel.app/store',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/store`,
             lastModified: new Date(),
         },
         {
-            url: 'https://thislittlegoose.vercel.app/collections/cups',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/collections/cups`,
             lastModified: new Date(),
         },
         {
-            url: 'https://thislittlegoose.vercel.app/products/ravenna-cup',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/products/ravenna-cup`,
             lastModified: new Date(),
         },
         {
-            url: 'https://thislittlegoose.vercel.app/account',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/account`,
             lastModified: new Date(),
         },
         {
-            url: 'https://thislittlegoose.vercel.app/account/login',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/account/login`,
             lastModified: new Date(),
         },
         {
-            url: 'https://thislittlegoose.vercel.app/cart',
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/cart`,
             lastModified: new Date(),
         },
     ]
